@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from './app/navigation/navigation';
+import Navigation from './app/navigation/Navigation';
 import {firebaseApp} from './app/utils/FireBase'
 
 

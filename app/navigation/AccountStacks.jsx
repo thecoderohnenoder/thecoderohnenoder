@@ -1,13 +1,27 @@
-import { createStackNavigator } from 'react-navigation-stack'
-import MyAccountScreen from '../screens/Account/MyAccount'
+import { createStackNavigator } from 'react-navigation-stack';
+import MyAccountScreen from '../screens/Account/MyAccount';
 
+import LoginScreen from '../screens/Account/Login';
+import RegisterScreen from '../screens/Account/Register';
 const AccountScreenStacks = createStackNavigator({
-    Restaurants: {
-        screen:MyAccountScreen,
-        navigationOptions:( )=> ({
-            title:"MyAccount"
-        })
-    }
-})
+	MyAccount: {
+		screen: MyAccountScreen,
+		navigationOptions: () => ({
+			title: 'MyAccount'
+		})
+	},
+	Login: {
+		screen: LoginScreen,
+		navigationOptions: () => ({
+			title: 'Login'
+		})
+	},
+	Register: {
+		screen: RegisterScreen,
+		navigationOptions: () => ({
+			title: 'Register'
+		})
+	}
+});
 
-export default AccountScreenStacks
+export default AccountScreenStacks;
