@@ -11,6 +11,7 @@ const RestaurantsScreenStacks = createStackNavigator({
 			title: 'Der Kasseler'
 		})
 	},
+	
 	AddRestaurants: {
 		screen: AddRestaurants,
 		navigationOptions: () => ({

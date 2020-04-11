@@ -6,7 +6,29 @@ import * as Permissions from 'expo-permissions';
 import * as ImagePicker from 'expo-image-picker';
 import { YellowBox } from 'react-native';
 import _ from 'lodash';
-
+/**
+ * @api {put} firebase.storage().ref().child(`avatar/${nameImage}`)/ Image Uploaded
+ * @apiName changeAvatar
+ * @apiGroup User
+ *
+ * @apiParam {Number} id UserInfo.
+ *
+ * @apiSuccess {Image} Avatar changed from User
+ *
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 200 OK
+ *     {
+ *      "User": "Avatar Changed success"
+ *     }
+ *
+ * @apiError UserNotFound The id of the User was not found.
+ *
+ * @apiErrorExample Error-Response:
+ *     HTTP/1.1 404 Not Found
+ *     {
+ *       "resultPermissionCamera === 'denied'": "Process Gallery Suspense"
+ *     }
+ */
 YellowBox.ignoreWarnings(['Setting a timer']);
 const _console = _.clone(console);
 console.warn = message => {
