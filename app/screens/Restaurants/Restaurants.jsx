@@ -105,7 +105,7 @@ function AddRestaurantButton(props) {
     <ActionButton
       buttonColor="#00a680"
       onPress={() =>
-        navigation.navigate("AddRestaurant", { setIsReloadRestaurants })
+        navigation.navigate("AddRestaurants", { setIsReloadRestaurants })
       }
     />
   );

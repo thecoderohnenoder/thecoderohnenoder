@@ -55,7 +55,7 @@ export default function AddRestaurantForm(props) {
 						navigation.navigate('Restaurants');
 					})
 					.catch((error) => {
-						console.log(error);
+						//console.log(error);
 						setIsLoading(false);
 						toastRef.current.show('Error uploading restaurant, try later', 5000);
 					});
@@ -237,7 +237,7 @@ function Map(props) {
 			if (statusPermissions !== 'granted') {
 				toastRef.current.show('You have to accept the location permits to create a restaurant.', 5000);
 			} else {
-				const loc = await Location.getCurrentPositionAsync({ enableHighAccuracy:true });
+				const loc = await Location.getCurrentPositionAsync({ enableHighAccuracy: true });
 				console.log(loc);
 				setLocation({
 					latitude: loc.coords.latitude,

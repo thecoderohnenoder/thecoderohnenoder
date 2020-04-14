@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, FlatList, ActivityIndicator, TouchableOpacity } from 'react-native';
-
 import { Image } from 'react-native-elements';
 import * as firebase from 'firebase';
 
@@ -12,7 +11,7 @@ export default function ListRestaurants(props) {
 			{restaurants ? (
 				<FlatList
 					data={restaurants}
-					renderItem={(restaurant) => <Restaurant restaurant={restaurant}  navigation={navigation}/>}
+					renderItem={(restaurant) => <Restaurant restaurant={restaurant} navigation={navigation} />}
 					keyExtractor={(item, index) => index.toString()}
 					onEndReached={handleLoadMore}
 					onEndReachedThreshold={0.5}
@@ -27,6 +26,7 @@ export default function ListRestaurants(props) {
 		</View>
 	);
 }
+
 function Restaurant(props) {
 	const { restaurant, navigation } = props;
 	const { name, address, description, images } = restaurant.item.restaurant;
@@ -37,10 +37,15 @@ function Restaurant(props) {
 		firebase.storage().ref(`restaurant-images/${image}`).getDownloadURL().then((result) => {
 			setImageRestaurant(result);
 		});
-	}, []);
+	});
 
 	return (
-		<TouchableOpacity onPress={() => navigation.navigate("Restaurant",{restaurant})}>
+		<TouchableOpacity
+			onPress={() =>
+				navigation.navigate('Restaurant', {
+					restaurant: restaurant.item.restaurant
+				})}
+		>
 			<View style={Styles.viewRestaurant}>
 				<View style={Styles.viewRestaurantImage}>
 					<Image
@@ -61,7 +66,7 @@ function Restaurant(props) {
 }
 function FooterList(props) {
 	const { isLoading } = props;
-	
+
 	if (isLoading) {
 		return (
 			<View style={Styles.loadingRestaurants}>

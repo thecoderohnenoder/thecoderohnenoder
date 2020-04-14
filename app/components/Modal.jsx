@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Overlay } from 'react-native-elements';
 
@@ -14,10 +14,9 @@ export default function Modal(props) {
 			overlayBackgroundColor="transparent"
 			overlayStyle={Styles.overlay}
 			onBackdropPress={closeModal}
-		
-        >
-        {children}
-        </Overlay>
+		>
+			{children}
+		</Overlay>
 	);
 }
 const Styles = StyleSheet.create({

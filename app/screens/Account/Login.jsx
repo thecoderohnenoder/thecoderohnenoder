@@ -17,7 +17,7 @@ export default function Login(props) {
 			</View>
 			<Divider style={Styles.divider} />
 			<View style={Styles.viewContainer}>
-				<LoginFacebook toastRef={toastRef} navigation={navigation}/>
+				<LoginFacebook toastRef={toastRef} navigation={navigation} />
 			</View>
 			<Toast ref={toastRef} position="center" opacity={0.5} />
 		</ScrollView>

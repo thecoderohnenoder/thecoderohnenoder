@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import Toast from 'react-native-easy-toast';
 import Loading from '../../components/Loading';
 import AddRestaurantsForm from '../../components/restaurants/RestaurantsForm';

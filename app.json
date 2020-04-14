@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Blank Template",
-    "slug": "Restaurants",
+    "name": "DER Kasseler",
+    "slug": "der-kasseler",
     "privacy": "public",
     "platforms": [
       "ios",
@@ -10,9 +10,9 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon1.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/herkules.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -23,11 +23,16 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-      
+      "bundleIdentifier": "fortuna.world",
+      "supportsTablet": false
     },
     "android": {
-      "permissions": ["CAMERA_ROLL", "LOCATION"]
-    }
+      "package": "fortuna.world",
+      "permissions": [
+        "CAMERA_ROLL",
+        "LOCATION"
+      ]
+    },
+    "description": "mi primera APP con React-native"
   }
 }
